@@ -5,8 +5,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Catalyst
 %define	pnam	Plugin-Static-Simple
-Summary:	Catalyst::Plugin::Static::Simple - Make serving static pages painless.
-#Summary(pl):	
+Summary:	Catalyst::Plugin::Static::Simple - make serving static pages painless
+Summary(pl):	Catalyst::Plugin::Static::Simple - bezpolesne serwowanie stron statycznych
 Name:		perl-Catalyst-Plugin-Static-Simple
 Version:	0.10
 Release:	1
@@ -25,18 +25,26 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The Static::Simple plugin is designed to make serving static content in your
-application during development quick and easy, without requiring a single
-line of code from you.
+The Static::Simple plugin is designed to make serving static content
+in your application during development quick and easy, without
+requiring a single line of code from you.
 
-It will detect static files used in your application by looking for file
-extensions in the URI.  By default, you can simply load this plugin and it
-will immediately begin serving your static files with the correct MIME type.
-The light-weight MIME::Types module is used to map file extensions to
-IANA-registered MIME types.
+It will detect static files used in your application by looking for
+file extensions in the URI. By default, you can simply load this
+plugin and it will immediately begin serving your static files with
+the correct MIME type. The light-weight MIME::Types module is used to
+map file extensions to IANA-registered MIME types.
 
-# %description -l pl
-# TODO
+%description -l pl
+Wtyczka Static::Simple zosta³a zaprojektowana aby uczyniæ serwowanie
+statycznej tre¶ci z aplikacji w czasie tworzenia szybkim i ³atwym, nie
+wymagaj±cym napisania ani jednej linii kodu.
+
+Wtyczka ta wykrywa statyczne pliki u¿yte w aplikacji szukaj±c
+rozszerzeñ pliku w URI. Domy¶lnie mo¿na po prostu wczytaæ tê wtyczkê,
+a ona natychmiast zacznie serwowaæ statyczne pliki z poprawnym typem
+MIME. Do odwzorowywania rozszerzeñ plików na typy MIME zarejestrowane
+w IANA zosta³ wykorzystany lekki modu³ MIME::Types.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -60,5 +68,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
+%dir %{perl_vendorlib}/Catalyst/Plugin/Static
 %{perl_vendorlib}/Catalyst/Plugin/Static/*.pm
 %{_mandir}/man3/*
