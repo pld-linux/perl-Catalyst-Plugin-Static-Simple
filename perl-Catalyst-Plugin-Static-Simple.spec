@@ -6,7 +6,7 @@
 %define	pdir	Catalyst
 %define	pnam	Plugin-Static-Simple
 Summary:	Catalyst::Plugin::Static::Simple - make serving static pages painless
-Summary(pl):	Catalyst::Plugin::Static::Simple - bezpolesne serwowanie stron statycznych
+Summary(pl.UTF-8):   Catalyst::Plugin::Static::Simple - bezpolesne serwowanie stron statycznych
 Name:		perl-Catalyst-Plugin-Static-Simple
 Version:	0.10
 Release:	1
@@ -35,16 +35,16 @@ plugin and it will immediately begin serving your static files with
 the correct MIME type. The light-weight MIME::Types module is used to
 map file extensions to IANA-registered MIME types.
 
-%description -l pl
-Wtyczka Static::Simple zosta³a zaprojektowana aby uczyniæ serwowanie
-statycznej tre¶ci z aplikacji w czasie tworzenia szybkim i ³atwym, nie
-wymagaj±cym napisania ani jednej linii kodu.
+%description -l pl.UTF-8
+Wtyczka Static::Simple zostaÅ‚a zaprojektowana aby uczyniÄ‡ serwowanie
+statycznej treÅ›ci z aplikacji w czasie tworzenia szybkim i Å‚atwym, nie
+wymagajÄ…cym napisania ani jednej linii kodu.
 
-Wtyczka ta wykrywa statyczne pliki u¿yte w aplikacji szukaj±c
-rozszerzeñ pliku w URI. Domy¶lnie mo¿na po prostu wczytaæ tê wtyczkê,
-a ona natychmiast zacznie serwowaæ statyczne pliki z poprawnym typem
-MIME. Do odwzorowywania rozszerzeñ plików na typy MIME zarejestrowane
-w IANA zosta³ wykorzystany lekki modu³ MIME::Types.
+Wtyczka ta wykrywa statyczne pliki uÅ¼yte w aplikacji szukajÄ…c
+rozszerzeÅ„ pliku w URI. DomyÅ›lnie moÅ¼na po prostu wczytaÄ‡ tÄ™ wtyczkÄ™,
+a ona natychmiast zacznie serwowaÄ‡ statyczne pliki z poprawnym typem
+MIME. Do odwzorowywania rozszerzeÅ„ plikÃ³w na typy MIME zarejestrowane
+w IANA zostaÅ‚ wykorzystany lekki moduÅ‚ MIME::Types.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
