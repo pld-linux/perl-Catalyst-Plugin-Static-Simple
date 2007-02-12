@@ -6,7 +6,7 @@
 %define	pdir	Catalyst
 %define	pnam	Plugin-Static-Simple
 Summary:	Catalyst::Plugin::Static::Simple - make serving static pages painless
-Summary(pl.UTF-8):   Catalyst::Plugin::Static::Simple - bezpolesne serwowanie stron statycznych
+Summary(pl.UTF-8):	Catalyst::Plugin::Static::Simple - bezpolesne serwowanie stron statycznych
 Name:		perl-Catalyst-Plugin-Static-Simple
 Version:	0.10
 Release:	1
