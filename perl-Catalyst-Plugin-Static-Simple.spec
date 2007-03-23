@@ -8,13 +8,13 @@
 Summary:	Catalyst::Plugin::Static::Simple - make serving static pages painless
 Summary(pl.UTF-8):	Catalyst::Plugin::Static::Simple - bezpolesne serwowanie stron statycznych
 Name:		perl-Catalyst-Plugin-Static-Simple
-Version:	0.10
+Version:	0.15
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	d852a4835ed664af1d7a82b62f0a72cd
+# Source0-md5:	930594a0490af190eed4f62ac1ac5e9b
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
