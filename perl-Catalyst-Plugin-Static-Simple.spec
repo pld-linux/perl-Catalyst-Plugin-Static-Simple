@@ -7,20 +7,23 @@
 Summary:	Catalyst::Plugin::Static::Simple - make serving static pages painless
 Summary(pl.UTF-8):	Catalyst::Plugin::Static::Simple - bezpolesne serwowanie stron statycznych
 Name:		perl-Catalyst-Plugin-Static-Simple
-Version:	0.29
+Version:	0.38
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Catalyst/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	37c94e08cd227507801b0e6c41603d63
+Source0:	https://www.cpan.org/authors/id/E/ET/ETHER/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	518effd795dc72379f4746569a4d7df9
+# https://security.metacpan.org/patches/C/Catalyst-Plugin-Static-Simple/0.38/CVE-2026-15743-r1.patch
+Patch0:		CVE-2026-15743.patch
 URL:		http://search.cpan.org/dist/Catalyst-Plugin-Static-Simple/
-BuildRequires:	perl-Module-Build
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl-Catalyst >= 5.30
-BuildRequires:	perl-MIME-Types >= 1.15
+BuildRequires:	perl-Catalyst >= 5.80008
+BuildRequires:	perl-MIME-Types >= 2.03
+BuildRequires:	perl-Moose
+BuildRequires:	perl-namespace-autoclean
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -49,9 +52,10 @@ w IANA został wykorzystany lekki moduł MIME::Types.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
+%patch -P0 -p1
 
 %build
-%{__perl} -MExtUtils::MakeMaker -we 'WriteMakefile(NAME=>"Catalyst::Plugin::Static::Simple")' \
+%{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 %{__make}
 
